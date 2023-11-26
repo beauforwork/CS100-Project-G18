@@ -1,0 +1,8 @@
+.ribbon{
+    display: block;
+    text-align: center;
+}
+.pup{
+    display: inline-block;
+    float: right;
+}
