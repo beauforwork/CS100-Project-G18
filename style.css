@@ -1,8 +1,52 @@
-.ribbon{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ribbon {
     display: block;
     text-align: center;
 }
-.pup{
-    display: inline-block;
-    float: right;
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.about {
+    margin-left: 75px;
+    margin-top: 75px;
+}
+h3 {
+    font-weight: bold;
+    font-size: 36px;
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+h2 {
+    font-weight: 600;
+    font-size: 26px;
+}
+h1 {
+    font-weight: 400;
+    font-size: 24px;
+}
+.fern {
+    padding-bottom: 20px;
+    line-height: 0.8;
+}
+.beau{
+    padding-bottom: 20px;
+    line-height: 0.8;
+}
+.palm {
+    padding-bottom: 30px;
+    line-height: 0.8;
+}
+nav a {
+    text-decoration: none;
+    font-size: 24px;
+}
+.pup {
+    margin-right: 75px;
 }
