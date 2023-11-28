@@ -102,3 +102,16 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* Phone */
+@media screen and (max-width: 480px){
+  body{
+    background-color: #F7CB45;
+  }
+}
+/*tablet*/
+@media screen and (max-width: 834px) and (min-width:481px){
+  .form-container {
+    margin-top: 125px;
+  }
+}
