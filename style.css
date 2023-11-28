@@ -6,15 +6,19 @@
 .ribbon {
     display: block;
     text-align: center;
+    background-image: url(background.png);
+    margin-bottom: -25px;
 }
 nav {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    padding: 50px;
+    background-color: #F7CB45;
+    color: aliceblue;
 }
 .about {
-    margin-left: 75px;
+    margin-left: 65px;
     margin-top: 75px;
 }
 h3 {
@@ -40,12 +44,27 @@ h1 {
     line-height: 0.8;
 }
 .palm {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     line-height: 0.8;
+}
+.color {
+    background-color: #2253A2;
+    padding: 15px;
 }
 nav a {
     text-decoration: none;
     font-size: 24px;
+    color: aliceblue;
+    
+}
+nav  a:hover {
+    color: rgb(70, 36, 36);
+    transition: 0.3s;
+}
+.activities {
+    background-color: #D13B34;
+    padding: 15px;
+    padding-right: 165px;
 }
 .pup {
     margin-right: 75px;
