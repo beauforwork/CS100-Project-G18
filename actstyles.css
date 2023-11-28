@@ -9,14 +9,16 @@
 /* Set the font family for the entire body */
 body {
   font-family: Arial, sans-serif;
+  background-color: #ffda6c;
 }
 
 /* Styling for the form container */
 .form-container {
+  background-image: url(background.png);
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   border-radius: 5px;
 }
 
@@ -62,8 +64,16 @@ body {
 
 /* Styling for the submit button */
 .form-group input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+  background-color: #D13B34;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-group input[type="submit"]:hover{
+  background-color: #a7241d;
+  color: rgb(255, 255, 255);
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
