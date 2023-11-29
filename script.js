@@ -12,21 +12,6 @@ const config = {
   backendUrl: "https://d1a6370uhsfk5w.cloudfront.net/", // Default backend URL
 };
 
-/* Function to validate Nickname
-function validateNickname(){
-  const nicknameInput = document.getElementById("nickname");
-  const nicknamePattern = /[A-Za-z]$/;
-  const errorElement = document.getElementById("nicknameError");
-
-  if (!nicknamePattern.test(nicknameInput.value)) {
-    errorElement.textContent = "Please enter a valid nickname in English.";
-    return false;
-  } else {
-    errorElement.textContent = ""; // Clear the error message when valid
-  }
-  return true;
-}*/
-
 // Function to validate Firstname and Lastname
 function validateName() {
   const fullnameInput = document.getElementById("fullname");
@@ -190,14 +175,33 @@ async function submitForm(event) {
   }
 }
 
-function printOutput() {
-  let output = prompt('Please enter prompt meassage:');
-  //let output = getElementById('studentID');
-  let outputContainer = document.getElementById('show');
-  let newOutputParagraph = document.createElement('p');
-  newOutputParagraph.textContent = output ;
-  outputContainer.appendChild(newOutputParagraph);
-}
+document.getElementById('myForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Get form data
+  var nickname = document.getElementById('nickname').value;
+  var fullname = document.getElementById('fullname').value;
+  var studentID = document.getElementById('studentID').value;
+  var email = document.getElementById('email').value;
+  var workTitle = document.getElementById('workTitle').value;
+  var activityType = document.getElementById('activityType').value;
+  var startDate = document.getElementById('startDate').value;
+  var endDate = document.getElementById('endDate').value;
+  var description = document.getElementById('description').value;
+
+  // Display the submitted data
+  var outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = '<h2>Submitted Data</h2>' +
+                        '<p><strong>Nickname:</strong> ' + nickname + '</p>' +
+                        '<p><strong>Full Name:</strong> ' + fullname + '</p>' +
+                        '<p><strong>Student ID:</strong> ' + studentID + '</p>' +
+                        '<p><strong>Email:</strong> ' + email + '</p>'+
+                        '<p><strong>Title:</strong> ' + workTitle + '</p>' +
+                        '<p><strong>Activity type:</strong> ' + activityType + '</p>' +
+                        '<p><strong>start date:</strong> ' + startDate+ '</p>' +
+                        '<p><strong>end date:</strong> ' + endDate + '</p>' +
+                        '<p><strong>description:</strong> ' + description + '</p>' ;
+});
 
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
@@ -208,7 +212,6 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
-document.getElementById('submit').addEventListener("click", printOutput);
 
 /*function printOutput(){
   let output = prompt('Please enter a prompt message:'); 

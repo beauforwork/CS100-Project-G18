@@ -80,6 +80,10 @@ body {
   cursor: pointer;
 }
 
+.output{
+  text-align: center;
+}
+
 /* Styling for small helper text */
 .form-group small {
   font-size: 12px;
