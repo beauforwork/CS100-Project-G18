@@ -12,14 +12,30 @@ const config = {
   backendUrl: "https://d1a6370uhsfk5w.cloudfront.net/", // Default backend URL
 };
 
+/* Function to validate Nickname
+function validateNickname(){
+  const nicknameInput = document.getElementById("nickname");
+  const nicknamePattern = /[A-Za-z]$/;
+  const errorElement = document.getElementById("nicknameError");
+
+  if (!nicknamePattern.test(nicknameInput.value)) {
+    errorElement.textContent = "Please enter a valid nickname in English.";
+    return false;
+  } else {
+    errorElement.textContent = ""; // Clear the error message when valid
+  }
+  return true;
+}*/
+
 // Function to validate Firstname and Lastname
 function validateName() {
   const fullnameInput = document.getElementById("fullname");
+  const fullnamePattern = /[A-Za-z]+\s[A-za-z]+$/ ;
   const names = fullnameInput.value.trim().split(" ");
   const errorElement = document.getElementById("fullnameError");
 
-  if (names.length !== 2) {
-    errorElement.textContent = "Please enter both your Firstname and Lastname.";
+  if (names.length !== 2 || !fullnamePattern.test(fullnameInput.value)) {
+    errorElement.textContent = "Please enter both your Firstname and Lastname in English.";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
@@ -45,7 +61,7 @@ function validateStudentID() {
 // Function to validate University Email
 function validateEmail() {
   const emailInput = document.getElementById("email");
-  const emailPattern = /^.{2}+@dome\.tu\.ac\.th$/;
+  const emailPattern = /^.*[a-z]{3}@dome\.tu\.ac\.th$/;
   const errorElement = document.getElementById("emailError");
 
   if (!emailPattern.test(emailInput.value)) {
@@ -174,6 +190,15 @@ async function submitForm(event) {
   }
 }
 
+function printOutput() {
+  let output = prompt('Please enter prompt meassage:');
+  //let output = getElementById('studentID');
+  let outputContainer = document.getElementById('show');
+  let newOutputParagraph = document.createElement('p');
+  newOutputParagraph.textContent = output ;
+  outputContainer.appendChild(newOutputParagraph);
+}
+
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
 
@@ -183,6 +208,7 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+document.getElementById('submit').addEventListener("click", printOutput);
 
 /*function printOutput(){
   let output = prompt('Please enter a prompt message:'); 
@@ -190,5 +216,9 @@ document.getElementById("email").addEventListener("input", validateEmail);
   let newOutputParagraph = document.createElement('p');
   newOutputParagraph.textContent = "Hello" + output ;
   output.COntainer.appendchild(newOutputParagraph);
+}
+function DisplayID(){
+  document.getElementById('show').innerHTML = studentIDInput ;
 }*/
+
 
