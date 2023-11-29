@@ -30,11 +30,11 @@ function validateName() {
 // Function to validate Student ID
 function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
-  const studentIDPattern = /^\d{10}$/;
+  const studentIDPattern = /^6609\d{6}$/;
   const errorElement = document.getElementById("studentIDError");
 
   if (!studentIDPattern.test(studentIDInput.value)) {
-    errorElement.textContent = "Please enter a 10-digit Student ID.";
+    errorElement.textContent = "Please enter a 10-digit Student ID start with 6609.";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
@@ -45,7 +45,7 @@ function validateStudentID() {
 // Function to validate University Email
 function validateEmail() {
   const emailInput = document.getElementById("email");
-  const emailPattern = /^.+@dome\.tu\.ac\.th$/;
+  const emailPattern = /^.{2}+@dome\.tu\.ac\.th$/;
   const errorElement = document.getElementById("emailError");
 
   if (!emailPattern.test(emailInput.value)) {
@@ -123,6 +123,7 @@ async function submitForm(event) {
   // Create the data object to send to the backend
   const formData = new FormData(event.target);
   const data = {
+    nickname: formData.get("nickname"),
     first_name: formData.get("fullname").split(" ")[0],
     last_name: formData.get("fullname").split(" ")[1],
     student_id: parseInt(formData.get("studentID")),
@@ -182,3 +183,12 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+
+/*function printOutput(){
+  let output = prompt('Please enter a prompt message:'); 
+  let outputContainer = document.getElementById('show');
+  let newOutputParagraph = document.createElement('p');
+  newOutputParagraph.textContent = "Hello" + output ;
+  output.COntainer.appendchild(newOutputParagraph);
+}*/
+
