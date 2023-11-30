@@ -35,13 +35,14 @@ function validateStudentID() {
   const errorElement = document.getElementById("studentIDError");
 
   if (!studentIDPattern.test(studentIDInput.value)) {
-    errorElement.textContent = "Please enter a 10-digit Student ID start with 6609.";
+    errorElement.textContent = "Please enter a 10-digit Student ID start with 6609." ;
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
   }
   return true;
 }
+
 
 // Function to validate University Email
 function validateEmail() {
@@ -175,7 +176,7 @@ async function submitForm(event) {
   }
 }
 
-document.getElementById('myForm').addEventListener('submit', function (e) {
+/*document.getElementById('myForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   // Get form data
@@ -191,9 +192,9 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
 
   // Display the submitted data
   var outputDiv = document.getElementById('output');
-  outputDiv.innerHTML = '<h2>Submitted Data</h2>' +
-                        '<p><strong>Nickname:</strong> ' + nickname + '</p>' +
-                        '<p><strong>Full Name:</strong> ' + fullname + '</p>' +
+  outputDiv.innerHTML = '<h2><center>Submitted Data</h2>' +
+                        '<p style = "margin-left:5%"><strong>Nickname:</strong> ' + nickname + '</p>' +
+                        '<p id = "pp" ><strong>Full Name:</strong> ' + fullname + '</p>' +
                         '<p><strong>Student ID:</strong> ' + studentID + '</p>' +
                         '<p><strong>Email:</strong> ' + email + '</p>'+
                         '<p><strong>Title:</strong> ' + workTitle + '</p>' +
@@ -201,7 +202,7 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
                         '<p><strong>start date:</strong> ' + startDate+ '</p>' +
                         '<p><strong>end date:</strong> ' + endDate + '</p>' +
                         '<p><strong>description:</strong> ' + description + '</p>' ;
-});
+});*/
 
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);

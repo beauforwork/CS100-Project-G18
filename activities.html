@@ -12,6 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <title>our activities</title>
   <link rel="stylesheet" href="actstyles.css">
 </head>
@@ -135,9 +136,37 @@
     </form>
   </div>
 
-  <div id="output"></div>
+  <div id="output"> </div>
 
   <!-- JavaScript -->
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  // Get form data
+  var nickname = document.getElementById('nickname').value;
+  var fullname = document.getElementById('fullname').value;
+  var studentID = document.getElementById('studentID').value;
+  var email = document.getElementById('email').value;
+  var workTitle = document.getElementById('workTitle').value;
+  var activityType = document.getElementById('activityType').value;
+  var startDate = document.getElementById('startDate').value;
+  var endDate = document.getElementById('endDate').value;
+  var description = document.getElementById('description').value;
+  
+  // Display the submitted data
+  var outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = '<h2 class ="Submitdata">Submitted Data</h2>' +
+                        '<p class ="Nickname"><strong>Nickname:</strong> ' + nickname + '</p>' +
+                        '<p class = "fullname" ><strong>Full Name:</strong> ' + fullname + '</p>' +
+                        '<p class = "SID"><strong>Student ID:</strong> ' + studentID + '</p>' +
+                        '<p class = "mail"><strong>Email:</strong> ' + email + '</p>'+
+                        '<p class = "title"><strong>Title:</strong> ' + workTitle + '</p>' +
+                        '<p class = "acttype"><strong>Activity type:</strong> ' + activityType + '</p>' +
+                        '<p class = "startdate"><strong>Start date:</strong> ' + startDate+ '</p>' +
+                        '<p class = "enddate"><strong>End date:</strong> ' + endDate + '</p>' +
+                        '<p class = "descrip"><strong>Description:</strong> ' + description + '</p>' ;
+});
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
