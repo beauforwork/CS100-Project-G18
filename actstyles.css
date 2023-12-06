@@ -20,6 +20,7 @@ body {
   padding: 20px;
   /*border: 1px solid #ccc;*/
   border-radius: 5px;
+  box-shadow: 0 1em 4em rgba(71, 50, 4, 0.3)
 }
 
 /* Center-align the heading and add margin at the bottom */

@@ -176,9 +176,6 @@ async function submitForm(event) {
   }
 }
 
-/*document.getElementById('myForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
   // Get form data
   var nickname = document.getElementById('nickname').value;
   var fullname = document.getElementById('fullname').value;
@@ -189,6 +186,12 @@ async function submitForm(event) {
   var startDate = document.getElementById('startDate').value;
   var endDate = document.getElementById('endDate').value;
   var description = document.getElementById('description').value;
+  let submitBtn = document.getElementById("submit");
+
+/*document.getElementById('myForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+
 
   // Display the submitted data
   var outputDiv = document.getElementById('output');
@@ -214,15 +217,24 @@ document
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
 
-/*function printOutput(){
-  let output = prompt('Please enter a prompt message:'); 
-  let outputContainer = document.getElementById('show');
-  let newOutputParagraph = document.createElement('p');
-  newOutputParagraph.textContent = "Hello" + output ;
-  output.COntainer.appendchild(newOutputParagraph);
-}
-function DisplayID(){
-  document.getElementById('show').innerHTML = studentIDInput ;
-}*/
+
+submitBtn.addEventListener("mouseover", () => {
+  //If either password or username is invalid then do this..
+  if (!validateName() || !validateStudentID() || !validateEmail()) {
+    //Get the current position of submit btn
+    let containerRect = document.querySelector(".form-container").getBoundingClientRect();
+    let submitRect = document.getElementById("submit").getBoundingClientRect();
+    let offset = submitRect.left - containerRect.left;
+    console.log(offset);
+    //If the button is on the left hand side.. move it to the the right hand side
+    if (offset <= 200) {
+      submitBtn.style.transform = "translateX(20em)";
+    }
+    //Vice versa
+    else {
+      submitBtn.style.transform = "translateX(0)";
+    }
+  }
+});
 
 
