@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ribbon {
+    display: block;
+    text-align: center;
+    background-image: url(background.png);
+    margin-bottom: -25px;
+}
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #F7CB45;
+    color: aliceblue;
+}
+.about {
+    margin-left: 65px;
+    margin-top: 75px;
+}
+h3 {
+    font-weight: bold;
+    font-size: 36px;
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+h2 {
+    font-weight: 600;
+    font-size: 26px;
+}
+h1 {
+    font-weight: 400;
+    font-size: 24px;
+}
+.fern {
+    padding-bottom: 20px;
+    line-height: 0.8;
+}
+.beau{
+    padding-bottom: 20px;
+    line-height: 0.8;
+}
+.palm {
+    margin-bottom: 30px;
+    line-height: 0.8;
+}
+.color {
+    background-color: #2253A2;
+    padding: 15px;
+}
+nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: aliceblue;
+    
+}
+nav  a:hover {
+    color: rgb(70, 36, 36);
+    transition: 0.3s;
+}
+.activities {
+    background-color: #D13B34;
+    padding: 15px;
+    padding-right: 165px;
+    margin-bottom: 50px;
+}
+.pup {
+    margin-right: 65px;
+}
+
+/*Phone*/
+@media screen and (max-width: 480px){
+    .ribbon img {
+        width: 250px;
+    }
+    .ribbon {
+        background-position: left;
+        background-size: cover;
+    }
+    nav {
+        flex-direction: column-reverse;
+        justify-content: unset;
+        padding: 25px;
+    }
+    .pup img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 250px;
+    }
+    .about {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 12px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+    .activities {
+        padding-right: 215px;
+        margin-bottom: 20px;
+    }
+}
+
+/*tablet*/
+@media screen and (max-width: 834px) and (min-width:481px){
+    .ribbon img{
+        width: 450px;
+    }
+    .ribbon {
+        background-size: cover;
+    }
+    nav {
+        padding-top: 100px;
+        padding-right: 0px;
+        padding-left: 50px;
+        padding-bottom: 170px;
+    }
+    .about {
+        margin-left: 0px;
+        margin-top: 45px;
+        margin-right: 45px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 14px;
+    }
+    nav a{
+        font-size: 14px;
+        padding-right: 50px;
+        text-align: center;
+        width: 200px;
+    }
+    .pup img{
+        height: 360px;
+        margin-right: 0px;
+    }
+    .activities{
+        padding-right: 0px;
+    }
+}
