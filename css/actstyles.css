@@ -14,7 +14,7 @@ body {
 
 /* Styling for the form container */
 .form-container {
-  background-image: url(background.png);
+  background-image: url(../pic/background.png);
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;

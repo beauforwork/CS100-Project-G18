@@ -6,7 +6,7 @@
 .ribbon {
     display: block;
     text-align: center;
-    background-image: url(background.png);
+    background-image: url(../pic/background.png);
     margin-bottom: -25px;
 }
 nav {
